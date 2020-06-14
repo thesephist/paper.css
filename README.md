@@ -8,7 +8,7 @@ You can check out examples and get started with **paper.css** on the [GitHub Pag
 
 Start by adding the paper.css stylesheet to your page's `<head>`:
 
-```
-<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/paper.min.css" />
+```html
+<link rel="stylesheet" href="https://unpkg.com/@thesephist/paper.css/dist/paper.min.css" />
 ```
 

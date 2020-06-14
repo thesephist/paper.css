@@ -54,11 +54,22 @@ p {
     line-height: 1.5em;
 }
 
+pre,
+code {
+    background: #eee;
+    font-family: 'Menlo', 'Monaco', 'Courier', monospace;
+}
+
+pre {
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: auto;
+    padding: .6em;
+}
+
 code {
     padding: .1em .4em;
-    background: #eee;
     font-size: 1em;
-    font-family: 'Menlo', 'Monaco', 'Courier', monospace;
 }
 
 header,

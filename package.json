@@ -1,5 +1,5 @@
 {
-    "name": "paper.css",
+    "name": "@thesephist/paper.css",
     "version": "0.1.0",
     "description": "Lightweight, modern CSS to add some flair to your web-things",
     "main": "/src/paper.css",
