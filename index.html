@@ -1,0 +1,237 @@
+<!doctype html>
+
+<meta charset="utf8">
+
+<title>blocks.css</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="stylesheet" href="src/paper.css" />
+<link rel="stylesheet" href="src/simple.css" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<main>
+
+    <header class="accent paper">
+        <h1>paper.css</h1>
+        <p>Lightweight, modern CSS to add some flair to your web-things</p>
+    </header>
+
+    <section class="buttons">
+        <div class="left">
+            <a class="movable paper paper-border-left" href="https://github.com/thesephist/paper.css"
+                                                       target="_blank">
+                <span class="desktop">See on</span> GitHub
+            </a>
+            <a class="movable paper" href="https://thesephist.github.io/blocks.css/"
+                                     target="_blank">
+                blocks.css
+            </a>
+        </div>
+        <div class="right">
+            <a class="movable paper paper-border-right" href="https://thesephist.com"
+                                                        target="_blank">
+                <span class="desktop">A project</span> by @thesephist
+            </a>
+        </div>
+    </section>
+
+    <details open class="paper">
+        <summary>
+            <h2>Basics</h2>
+        </summary>
+
+        <p>
+        <strong>paper.css</strong> is a spiritual successor to
+        <a class="inline movable colored paper"
+           href="https://thesephist.github.io/blocks.css/"
+           target="_blank">blocks.css</a>,
+       a small library I'd made to add a nice, modern design aesthetic
+       to web apps without much work. paper.css carries the same simplicity,
+       focus on a single visual motif, and customizability thorugh CSS variables.
+        </p>
+
+        <p>A single paper element looks like this.</p>
+
+        <div class="paper">I'm a paper element.</div>
+
+        <p>
+        It's a static piece of paper hovering over the page. We make an element
+        into a paper element by adding the <code>paper</code> class.
+        We can further customize our paper element by adding other properties
+        through extra classes on the element.
+        </p>
+
+        <p>
+        Make the paper accented with a theme color with the <code>accent</code> class.
+        </p>
+
+        <div class="accent paper">Look at me! I'm colorful.</div>
+
+        <p>
+        If the accent is too bold, just color the text inside with
+        the <code>colored</code> class.
+        </p>
+
+        <div class="colored paper">I'm a little more subtle.</div>
+
+        <p>
+        A paper element is normally a <code>display: block</code> element. To use a
+        paper element inline, add the <code>inline</code> class to turn it into
+        an inline-block.
+        </p>
+
+        <p>This text includes <span class="inline paper">an inline paper element.</span></p>
+    </details open>
+
+    <details open class="paper">
+        <summary>
+            <h2>Movable paper</h2>
+        </summary>
+
+        <p>
+        The real appeal of paper elements is that the elevation off the page
+        can make interactive animations delightful. To mark a paper element as interactive,
+        add the <code>movable</code> class.
+        </p>
+
+        <p class="movable paper">I'm a movable paper element.</p>
+
+        <p>Try hovering over and clicking on the movable paper above.</p>
+
+        <div class="buttons">
+            <div class="left">
+                <div class="movable accent paper">accent</div>
+                <div class="movable colored paper">colored</div>
+            </div>
+        </div>
+
+        <p>
+        Movable elements are <code>font-weight: bold</code>. If you don't like it,
+        you can override the property on <code>.movable.paper</code> elements
+        in your own CSS.
+        </p>
+    </details open>
+
+    <details open class="paper">
+        <summary>
+            <h2>Borders</h2>
+        </summary>
+
+        <p>
+        One other visual accent we can add to paper elements is a single-sided border.
+        A paper card with a border can subtly draw attention to itself and come off
+        as less boring than a simple paper card.
+        </p>
+
+        <p>
+        We can add a border to a side of any paper element by adding the class
+        <code>paper-border-{{side}}</code>, where <code>side</code> can be any of
+        top, right, bottom, or left. Here's what those look like.
+        </p>
+
+        <div class="border-cards">
+            <div class="border-card paper paper-border-left">paper-border-left</div>
+            <div class="border-card paper paper-border-right">paper-border-right</div>
+            <div class="border-card paper paper-border-top">paper-border-top</div>
+            <div class="border-card paper paper-border-bottom">paper-border-bottom</div>
+        </div>
+
+        <p>We can also add multiple borders to the same element by using multiple classes.</p>
+
+        <div class="border-cards">
+            <div class="border-card paper paper-border-left paper-border-right">
+                paper-border-left paper-border-right
+            </div>
+        </div>
+    </details open>
+
+    <details open class="paper">
+        <summary>
+            <h2>Wrappers</h2>
+        </summary>
+
+        <p>
+        Paper elements have a small padding by default. If we're making a paper
+        element from an <code>&lt;img&gt;</code> or some other element that should
+        take up the entire paper area, add a <code>wrap</code> class to remove that
+        padding.
+        </p>
+
+        <p>With padding:</p>
+
+        <img class="paper movable" height="120px" src="assets/sample.jpg" alt="test image">
+
+        <p>... and without padding, with the <code>wrap</code> class.</p>
+
+        <img class="paper wrap movable" height="120px" src="assets/sample.jpg" alt="test image">
+
+        <p>Similar things work for videos, inputs, textareas, and other such elements.</p>
+    </details open>
+
+    <details open class="paper">
+        <summary>
+            <h2>Theming</h2>
+        </summary>
+
+        <p>
+        We can theme the color scheme of a paper.css page using CSS custom properties.
+        There are four variables you can adjust.
+        </p>
+
+        <ul>
+            <li>
+                <p><code>--paper-accent</code> is the accent color</p>
+            </li>
+            <li>
+                <p><code>--paper-foreground</code> is the color of the text in paper elements</p>
+            </li>
+            <li>
+                <p><code>--paper-background</code> is the color of the paper's background</p>
+            </li>
+            <li>
+                <p><code>--paper-border-width</code> determines the width of colored borders</p>
+            </li>
+        </ul>
+
+        <p>
+        To test theming,
+        <button class="switchThemeButton movable accent inline paper">click this button</button>
+        to switch the theme of this page.
+        </p>
+    </details>
+
+    <details open class="paper">
+        <summary>
+            <h2>Demo</h2>
+        </summary>
+
+        <p>
+        I'm using paper.css for most of my side projects since summer 2020,
+        including these below.
+        </p>
+
+        <ul>
+            <li>
+                <p>
+                <a href="https://codesynth.surge.sh" target="_blank">Codesynth</a>,
+                generating music from lines of source code with the Web Audio API
+                </p>
+            </li>
+        </ul>
+
+        <p>Of course, this demo page is also built with paper.css.</p>
+    </details open>
+
+    <p class="footer">
+    paper.css is made by 
+    <a href="https://thesephist.com" target="_blank">Linus</a>
+    and open source under the MIT License.
+    </p>
+
+</main>
+
+<script>
+    document.querySelector('.switchThemeButton').addEventListener('click', () => {
+        document.body.classList.toggle('themed');
+    });
+</script>

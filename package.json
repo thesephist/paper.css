@@ -1,0 +1,22 @@
+{
+    "name": "paper.css",
+    "version": "0.1.0",
+    "description": "Lightweight, modern CSS to add some flair to your web-things",
+    "main": "/src/paper.css",
+    "repository": "git@github.com:thesephist/paper.css.git",
+    "author": "Linus Lee <linus@thesephist.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup --config rollup.config.js",
+        "clean": "git clean -fxd",
+        "prepublishOnly": "yarn build"
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "devDependencies": {
+        "rollup": "^2.0.6",
+        "rollup-plugin-postcss": "^2.4.1"
+    }
+}
